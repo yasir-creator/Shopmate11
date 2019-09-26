@@ -1,0 +1,408 @@
+/* cards */
+
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+
+.hovereffect .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.hovereffect img {
+  display: block;
+  position: relative;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+.hovereffect:hover img {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /><feGaussianBlur stdDeviation="3" /></filter></svg>#filter');
+  filter: grayscale(0.1) blur(3px);
+  -webkit-filter: grayscale(0.1) blur(3px);
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.hovereffect h2 {
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  padding: 10px;
+  background: rgba(168, 163, 163, 0.6);
+}
+
+.hovereffect .info {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  border: 1px solid #fff;
+  margin: 400px 0 0 0;
+  border-radius: 12;
+  border-width: 5;
+  margin-bottom: 0%;
+  background-color: rgb(233, 41, 41);
+}
+
+.hovereffect a.info:hover {
+  box-shadow: 0 0 5px rgb(243, 239, 239);
+}
+
+.hovereffect a.info,
+.hovereffect h2 {
+  -webkit-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.hovereffect:hover a.info,
+.hovereffect:hover h2 {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+/* .card-common:hover {
+    box-shadow: 3px 7px 25px #999;
+    transform: translateY(-20px);
+    height: 500px;
+    background-image: linear-gradient(to bottom right, red, blue);
+  } */
+
+.card-img {
+  width: 100%;
+  height: 40vh;
+}
+
+.btn-block {
+  width: 50%;
+  border-radius: 50px;
+
+  align-items: center;
+  /* justify-content: center;
+    display: flex; */
+}
+/* end of cards */
+
+/* session */
+.container-img-session {
+  position: relative;
+  width: 96%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 40vh;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+.image2 {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 70vh;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container-img-session:hover .image {
+  opacity: 0.3;
+}
+
+.container-img-session:hover .middle {
+  opacity: 1;
+}
+
+.textd {
+  background-color: #f5867f;
+  color: white;
+  font-size: 19px;
+  padding: 10px 20px;
+}
+.textp {
+  background-color: #f44336;
+  color: white;
+  font-size: 22px;
+  padding: 10px 20px;
+}
+
+/* end of session */
+
+/* ad */
+.ad-img {
+  width: 100%;
+  height: 60vh;
+}
+/* end of ad */
+
+/* subscribe */
+.s-input {
+  border-radius: 50px !important;
+  height: 5vh;
+}
+
+.s-input:focus {
+  box-shadow: none;
+}
+
+.s-button {
+  border-radius: 50px;
+  width: 100px;
+  transition: all 0.4s;
+}
+
+.s-button:hover {
+  transform: translateY(-1px);
+  box-shadow: none;
+}
+/* end of subscribe */
+
+/* end of collection */
+/* end of kids page */
+
+/* sign in page */
+
+:root {
+  --input-padding-x: 1.5rem;
+  --input-padding-y: 0.75rem;
+}
+/* .signin-background-img {
+  background-image: url(assets/signin-bg-img.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+.card-signin {
+  border: 0;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: auto;
+  background-color: #ebf0f8;
+}
+
+.card-signin .card-title {
+  margin-bottom: 2rem;
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+
+.card-signin .card-body {
+  padding: 2rem;
+}
+
+.form-signin {
+  width: 100%;
+}
+
+.form-signin .btn {
+  font-size: 90%;
+  border-radius: 50px;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  padding: 4%;
+  transition: all 0.2s;
+}
+
+form.form-signin button {
+  margin: 0 auto;
+}
+
+.form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-label-group input {
+  height: 6vh;
+}
+
+.form-label-group > input,
+.form-label-group > label {
+  padding: var(--input-padding-y) var(--input-padding-x);
+}
+
+.form-label-group > label {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  /* Override default `<label>` margin */
+  line-height: 1.5;
+  color: #495057;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  transition: all 0.1s ease-in-out;
+}
+
+.form-label-group input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-moz-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::placeholder {
+  color: transparent;
+}
+
+.form-label-group input:not(:placeholder-shown) {
+  padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+  padding-bottom: calc(var(--input-padding-y) / 3);
+}
+
+.form-label-group input:not(:placeholder-shown) ~ label {
+  padding-top: calc(var(--input-padding-y) / 3);
+  padding-bottom: calc(var(--input-padding-y) / 3);
+  font-size: 12px;
+  color: #777;
+}
+
+/* end of sign in page */
+
+/* register page */
+/* .register-background-img {
+  background-image: url(assets/signin-bg-img.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+/* end of register page */
+
+/* detail page */
+
+/* .dcs {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: auto;
+}
+.dcs2 {
+  background-color: #eeecec;
+  width: 90%;
+  height: auto;
+  padding: 5%;
+}
+
+.dcis {
+  width: 80%;
+  height: 60vh;
+}
+
+.dcim0 {
+  width: 110px !important;
+  height: 100px !important;
+  background-image: url(assets/crousel-img1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.dcim1 {
+  width: 110px !important;
+  height: 100px !important;
+  background-image: url(assets/crousel-img2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.dcim2 {
+  width: 110px !important;
+  height: 100px !important;
+  background-image: url(assets/crousel-img3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.dcim3 {
+  width: 110px !important;
+  height: 100px !important;
+  background-image: url(assets/crousel-img4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+} */
+
+.custom-indicators {
+  position: relative;
+}
+
+.btn-cart {
+  border-radius: 50px;
+}
+
+.btn-wish {
+  border-radius: 50px;
+  background-color: rgb(221, 220, 220);
+}
+
+.btn-wish:hover {
+  background-color: rgb(199, 196, 196);
+}
+
+/* cards */
+.card-common2 {
+  width: 103%;
+  box-shadow: 1px 1px 3px #999;
+  transition: all 0.4s;
+}
+
+.card-common2:hover {
+  box-shadow: 1px 3px 7px #999;
+  transform: translateY(-1px);
+}
+
+.card-img2 {
+  width: 100%;
+  height: 40vh;
+}
+
+.btn-block {
+  width: 50%;
+  border-radius: 50px;
+}
+/* end of cards */

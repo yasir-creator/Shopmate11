@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="logo192.png" />
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./jquery/jquery.js" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Aleo"
+      rel="stylesheet"
+    />
+
+    <!--Stepper Link-->
+    <link rel="stylesheet" href="bs-stepper.min.css" />
+    <!--End Stepper Link-->
+    <!--Start Paginator-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <!--End Paginator-->
+    <!-- Start Links of shopmate  -->
+    <!-- <link rel="stylesheet" href="/public/css2/style.css" />
+    <link
+      rel="stylesheet"
+      href="/public/fonts/glyphicons-halflings-regular.eot"
+    /> -->
+    <!-- End Links of shopmate  -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.0/css/all.css"
+      integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="assets/images/title-img.png" />
+
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"
+      integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(document).ready(function() {
+        $("#reg").click(function() {
+          $("#nature2,seasonal3").hide();
+          $("#regional1").show();
+        });
+        $("#nat").click(function() {
+          $("#regional1,seasonal3").hide();
+          $("#nature2").show();
+        });
+        $("#sea").click(function() {
+          $("#nature2,regional1").hide();
+          $("#seasonal3").show();
+        });
+      });
+    </script>
+    <!-- Start Links of shopmate  -->
+    <script>
+      ReactDOM.render(<Pagination />, document.getElementById("app"));
+    </script>
+    <!-- <script src="/public/js/custom.js"></script>
+    <script src="/public/js/npm.js"></script> -->
+    <!-- End Links of shopmate  -->
+
+    <!--checkout steps-->
+    <script src="bs-stepper.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var stepper = new Stepper(document.querySelector(".bs-stepper"));
+      });
+    </script>
+    <script>
+      $(document).ready(function() {
+        var stepper = new Stepper($(".bs-stepper")[0]);
+      });
+    </script>
+    <!--Next stepper-->
+    <script>
+      var stepper = new Stepper(document.querySelector(".bs-stepper"));
+      stepper.next();
+
+      var stepper = new Stepper(document.querySelector(".bs-stepper"));
+
+      /// Will navigate to the second step
+      stepper.to(2);
+    </script>
+
+    <script src="dist/js/bs-stepper.js"></script>
+    <script>
+      var stepperEl = document.getElementById("stepper");
+      var stepper = new Stepper(stepperEl);
+
+      stepperEl.addEventListener("show.bs-stepper", function(event) {
+        // You can call preventDefault to stop the rendering of your step
+        // event.preventDefault()
+
+        console.warn(event.detail.indexStep);
+      });
+
+      stepperEl.addEventListener("shown.bs-stepper", function(event) {
+        console.warn("step shown");
+      });
+      // var stepper1Node = document.querySelector("#stepper1");
+      // var stepper1 = new Stepper(document.querySelector("#stepper1"));
+      // stepper1Node.addEventListener("show.bs-stepper", function(event) {
+      //   console.warn("show.bs-stepper", event);
+      // });
+      // stepper1Node.addEventListener("shown.bs-stepper", function(event) {
+      //   console.warn("shown.bs-stepper", event);
+      // });
+      // var stepper2 = new Stepper(document.querySelector("#stepper2"), {
+      //   linear: false,
+      //   animation: true
+      // });
+      // var stepper3 = new Stepper(document.querySelector("#stepper3"), {
+      //   animation: true
+      // });
+      // var stepper4 = new Stepper(document.querySelector("#stepper4"));
+    </script>
+    <!--end check out steps-->
+    <!-- <script>
+      const rootElement = document.getElementById("root");
+      ReactDOM.render(<Confirm />, rootElement);
+    </script> -->
+
+    <script src="https://js.stripe.com/v3/"></script>
+  </body>
+</html>
